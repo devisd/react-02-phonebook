@@ -1,4 +1,5 @@
 import React from 'react';
+import propTypes from 'prop-types';
 
 const Contacts = ({ contacts, deleteContact }) => {
   const contactList = contacts;
@@ -36,3 +37,8 @@ const Contacts = ({ contacts, deleteContact }) => {
 };
 
 export default Contacts;
+
+Contacts.propTypes = {
+  contacts: propTypes.array,
+  deleteContact: propTypes.func,
+};

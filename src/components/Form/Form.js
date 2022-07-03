@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Form extends Component {
+  static propTypes = {
+    name: PropTypes.string,
+    number: PropTypes.string,
+  };
+
   state = {
     name: '',
     number: '',

@@ -3,11 +3,19 @@ import Form from './components/Form';
 import Contacts from 'components/Contacts';
 import Filter from 'components/Filter';
 import { nanoid } from 'nanoid';
+import PropTypes from 'prop-types';
 
 class App extends Component {
   state = {
     contacts: [],
     filter: '',
+  };
+
+  static propTypes = {
+    id: PropTypes.string,
+    name: PropTypes.string,
+    number: PropTypes.string,
+    filter: PropTypes.string,
   };
 
   formSubmitHandler = data => {
